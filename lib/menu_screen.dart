@@ -2,6 +2,7 @@ import 'package:animation_course/screens/custom_paint.dart';
 import 'package:animation_course/screens/explicit_screen.dart';
 import 'package:animation_course/screens/flash_card_screen.dart';
 import 'package:animation_course/screens/implicit_animation.dart';
+import 'package:animation_course/screens/movie_screen.dart';
 import 'package:animation_course/screens/test_screen.dart';
 import 'package:animation_course/widgets/menu_button.dart';
 import 'package:flutter/material.dart';
@@ -83,6 +84,17 @@ class _MenuScreenState extends State<MenuScreen> {
                 ),
                 child: const MenuButton(
                   text: "Test",
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap: () => _onMoveScreen(
+                  const MovieScreen(),
+                ),
+                child: const MenuButton(
+                  text: "Movie",
                 ),
               ),
             ],
